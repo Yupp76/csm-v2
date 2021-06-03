@@ -1,0 +1,48 @@
+.s1 .grid-2 {
+  column-gap: 4rem;
+}
+
+.s1 {
+  padding: 6rem 0;
+}
+
+.s2 .grid-2 {
+  padding: 0;
+  column-gap: 0;
+  background-color: white;
+  /* align-items: initial; */
+}
+
+.s2 .grid-2 .text-content {
+  background-color: white;
+  padding: 1.5rem;
+}
+
+.s2 .grid-2 .text-content .sub-body-bold {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.s2 .text-content .sub-body-bold:nth-child(4) {
+  color: #ff8c1a;
+}
+
+.s2 .text-content .paragraph {
+  margin-bottom: 1.5rem;
+}
+
+.s2 .flex-table {
+  padding: 1.5rem;
+  background: #ff8c1a;
+}
+
+.s2 .flex-table .sub-body-bold {
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  .s2 .flex-table {
+    width: 93%;
+    width: -webkit-fill-available;
+  }
+}

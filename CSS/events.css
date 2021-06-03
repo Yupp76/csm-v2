@@ -1,0 +1,38 @@
+.section .heading-md {
+  margin-bottom: 4rem;
+}
+
+.section .section-wrapper {
+  background: #ff8c1a;
+  padding: 2rem;
+  width: 105%;
+  position: relative;
+}
+
+.section .section-content {
+  background: #ffffff;
+  padding: 2rem 1rem;
+  min-height: 210px;
+}
+
+@media screen and (max-width: 768px) {
+  .section .heading-md {
+    margin-bottom: 2rem;
+  }
+  .section .grid-2 .fluid {
+    margin-bottom: 2rem;
+    object-position: 50% 30%;
+  }
+  .section .section-wrapper {
+    width: auto;
+  }
+  .section .section-content {
+    width: auto;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .section .grid-2 .fluid {
+    margin-top: 1rem;
+  }
+}

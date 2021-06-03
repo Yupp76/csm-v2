@@ -1,0 +1,30 @@
+.grid-2 {
+  column-gap: 4rem;
+}
+
+.cards-wrapper.grid-2 {
+  row-gap: 4rem;
+}
+
+.card {
+  background: white;
+  width: 100%;
+  min-height: 415px;
+  height: 100%;
+  background-color: white;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+.card-content .sub-body-bold {
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (max-width: 768px) {
+  .card {
+    min-height: 100%;
+  }
+}

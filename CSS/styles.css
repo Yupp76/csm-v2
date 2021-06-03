@@ -1,0 +1,389 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
+
+/* Default styles fixes */
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #fcfcfc;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Common typography styles */
+.paragraph {
+  font-size: 16px;
+  line-height: 1.75;
+  font-weight: 500;
+  color: #4f4f4f;
+}
+
+.text-body-bold {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.sub-body-bold {
+  font-weight: 800;
+  font-size: 20px;
+  margin-bottom: 1.5rem;
+}
+
+.heading-lg {
+  font-weight: 700;
+  font-size: 48px;
+  margin-bottom: 1.5rem;
+}
+
+.heading-md {
+  font-weight: 700;
+  font-size: 38px;
+  margin-bottom: 1.5rem;
+}
+
+/* Common layout styles */
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 0.5rem;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  width: 180px;
+  height: 45px;
+  color: white;
+  font-weight: 700;
+}
+
+.btn a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn.btn-primary {
+  transition: 0.4s all ease-out;
+  background-color: #ff8c1a;
+}
+
+.btn.btn-primary:hover,
+.btn.btn-primary:focus {
+  background-color: #e05412;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 1rem;
+}
+
+.fluid {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.bordered {
+  border: 3px solid #3a3a3a;
+}
+
+.rounded {
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.rounded-extra {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.rounded-hard {
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+
+.solid-shadow {
+  box-shadow: 15px 15px 0px rgba(0, 0, 0, 0.07);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+}
+
+main {
+  min-height: 90vh;
+}
+
+/* Navbar styles */
+
+nav {
+  height: 100%;
+  width: 100%;
+  background-color: #fcfcfc;
+  padding: 1rem 0;
+}
+
+nav .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav img {
+  width: 90px;
+}
+
+nav .nav-items {
+  display: flex;
+  align-items: center;
+  color: black;
+  width: 50%;
+  justify-content: space-between;
+}
+nav .nav-items .text-body-bold {
+  margin-right: 1rem;
+}
+
+nav .nav-items a {
+  position: relative;
+  transition: 0.4s color ease-out;
+  text-decoration: none;
+  transition: 0.4s color ease-out;
+  color: black;
+}
+
+nav .nav-items a:hover,
+nav .nav-items a:focus {
+  color: #989898;
+}
+
+nav .nav-items a:active {
+  color: black;
+}
+
+nav .nav-items a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -0.75rem;
+  left: 1px;
+  height: 4px;
+  width: 100%;
+  background-color: #ff8c1a;
+}
+
+.mobile-nav-btn,
+.mobile-nav-menu {
+  display: none;
+}
+
+/* Footer styles */
+
+footer {
+  background: #333333;
+  padding-top: 2rem;
+  margin-top: 4rem;
+}
+
+footer .grid-2 {
+  align-items: normal;
+  padding-bottom: 7rem;
+}
+
+footer .footer-menus {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer .footer-menus li {
+  margin-bottom: 1.5rem;
+}
+
+footer .footer-menus a {
+  transition: 0.4s all ease-out;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: #fbfbfb;
+}
+
+footer .footer-menus a:hover,
+footer .footer-menus a:focus {
+  color: #dddddd;
+}
+
+footer .flex .sub-body-bold {
+  color: darkgray;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 1200px) {
+  .container {
+    width: auto;
+    margin: 0 1rem;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: none;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .grid-2.reversed {
+    flex-direction: column;
+  }
+
+  nav .nav-items {
+    display: none;
+  }
+  .mobile-nav-btn {
+    display: block;
+  }
+  #menuToggle {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  #menuToggle ul {
+    list-style: none;
+  }
+
+  #menuToggle #menuBtn {
+    width: 40px;
+    height: 32px;
+    position: absolute;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 5;
+  }
+
+  #menuToggle span {
+    display: flex;
+    width: 29px;
+    height: 2px;
+    margin-bottom: 5px;
+    position: relative;
+    background: #000000;
+    border-radius: 3px;
+    z-index: 1;
+    transform-origin: 5px 0px;
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1),
+      background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
+  }
+
+  #menuToggle span:first-child {
+    transform-origin: 0% 0%;
+  }
+
+  #menuToggle span:nth-last-child(2) {
+    transform-origin: 0% 100%;
+  }
+
+  #menuToggle #menuBtn.menu-open ~ span {
+    opacity: 1;
+    transform: rotate(45deg) translate(-3px, -1px);
+    background: #000000;
+  }
+  #menuToggle #menuBtn.menu-open ~ span:nth-last-child(3) {
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+  }
+
+  #menuToggle #menuBtn.menu-open ~ span:nth-last-child(2) {
+    transform: rotate(-45deg) translate(0, -1px);
+  }
+
+  #menu {
+    position: fixed;
+    width: 180px;
+    height: 100vh;
+    box-shadow: 0 0 10px #85888c;
+    margin: -50px 0 0 -50px;
+    padding: 50px;
+    padding-top: 125px;
+    top: 0;
+    right: 0;
+    background-color: #fdfdfd;
+    transform-origin: 0% 0%;
+    transform: translate(120%, 0);
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  }
+
+  #menu li {
+    padding: 1rem 0;
+    transition-delay: 2s;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+  #menu li a {
+    position: relative;
+    text-decoration: none;
+    color: black;
+  }
+
+  #menu li a.active::after {
+    content: "";
+    position: absolute;
+    bottom: -0.75rem;
+    left: 1px;
+    height: 4px;
+    width: 100%;
+    background-color: #ff8c1a;
+  }
+
+  #menuToggle #menuBtn.menu-open ~ ul {
+    transform: none;
+  }
+
+  .section {
+    padding: 2rem 0;
+  }
+
+  .fluid {
+    margin-bottom: 4rem;
+    height: 250px;
+  }
+
+  footer .grid-2 {
+    padding-top: 1rem;
+  }
+
+  footer .grid-2 img {
+    margin-bottom: 4rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .heading-lg {
+    font-size: 38px;
+  }
+
+  .heading-md {
+    font-size: 30px;
+  }
+  .section {
+    padding: 0.5rem 0;
+  }
+  .fluid {
+    margin-bottom: 2rem;
+  }
+}
